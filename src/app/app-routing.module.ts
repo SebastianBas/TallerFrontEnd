@@ -8,13 +8,13 @@ import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' }, // Redirecciona a inicio por defecto
-  { path: 'inicio', component: InicioComponent },
-  { path: 'mascotas', component: ListaMascotasComponent },
-  { path: 'mascotas/editar/:idMascota', component: EditarMascotasComponent },
-  { path: 'mascotas/agregar', component: EditarMascotasComponent },
-  { path: 'solicitudes', component: ListaSolicitudesComponent },
-  { path: 'solicitudes/editar', component: EditarSolicitudesComponent },
-  { path: 'solicitudes/agregar', component: EditarSolicitudesComponent },
+  { path: 'inicio', component: InicioComponent }, // Página de inicio
+  { path: 'mascotas', component: ListaMascotasComponent }, // Lista de mascotas
+  { path: 'mascotas/editar/:idMascota', component: EditarMascotasComponent }, // Editar una mascota por ID
+  { path: 'mascotas/agregar', component: EditarMascotasComponent }, // Agregar una nueva mascota
+  { path: 'solicitudes', component: ListaSolicitudesComponent }, // Lista de solicitudes
+  { path: 'solicitudes/editar/:idSolicitud', component: EditarSolicitudesComponent }, // Editar una solicitud por ID
+  { path: 'solicitudes/agregar', component: EditarSolicitudesComponent }, // Agregar una nueva solicitud
 ];
 
 @NgModule({
