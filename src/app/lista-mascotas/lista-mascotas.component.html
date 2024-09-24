@@ -1,0 +1,33 @@
+<div class="container">
+    <br>
+    <div class="row">
+      <div class="col-sm-12">
+        <form class="form-inline">
+          <fieldset class="form-group col-sm-11"></fieldset>
+          <fieldset class="form-group col-sm-1">
+            <a class="btn btn-primary" [routerLink]="['/mascotas/agregar']">Agregar Mascota</a>
+          </fieldset>
+        </form>
+        <br>
+        <div class="row">
+          <div class="col-sm-4" *ngFor="let mascota of mascotas | async">
+            <div class="card mb-4">
+              <img class="card-img-top" [src]="mascota.imagen" alt="Imagen de {{ mascota.nombre }}" *ngIf="mascota.imagen; else noImage" />
+              <ng-template #noImage>
+                <img class="card-img-top" src="default-image.jpg" alt="Imagen por defecto" />
+              </ng-template>
+              <div class="card-body">
+                <h5 class="card-title">{{ mascota.nombre }}</h5>
+                <p class="card-text"><strong>Edad:</strong> {{ mascota.edad }} años</p>
+                <p class="card-text"><strong>Género:</strong> {{ mascota.genero }}</p>
+                <p class="card-text">{{ mascota.descripcion }}</p>
+                <a class="btn btn-info" [routerLink]="['/mascotas/editar/', mascota.id]">Editar</a>
+                <a class="btn btn-danger" (click)="borrarMascota(mascota.id)">Borrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

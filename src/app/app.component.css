@@ -1,0 +1,24 @@
+.custom-navbar {
+    background-color: #2481a0; /* Color azul claro */
+  }
+  
+  .custom-navbar .nav-link {
+    color: #ffffff; 
+    font-size: 30px; 
+  }
+  
+  .custom-navbar .nav-link.active {
+    color: #00162c; 
+  }
+  
+  .custom-navbar .navbar-brand {
+    color: #fff; 
+    font-size: 40px; 
+  }
+  
+
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 25px; 
+  }
+  
+  
