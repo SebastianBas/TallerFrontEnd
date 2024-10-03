@@ -2,6 +2,7 @@
     <br>
     <div class="row">
       <div class="col-sm-12">
+        <!-- Formulario para agregar una nueva solicitud -->
         <form class="form-inline">
           <fieldset class="form-group col-sm-11"></fieldset>
           <fieldset class="form-group col-sm-1">
@@ -9,6 +10,7 @@
           </fieldset>
         </form>
         <br>
+        <!-- Tabla de solicitudes -->
         <table class="table table-striped">
           <thead>
             <tr class="row">
@@ -20,6 +22,7 @@
             </tr>
           </thead>
           <tbody>
+            <!-- Itera sobre la lista de solicitudes y muestra cada una en una fila -->
             <tr *ngFor="let solicitud of solicitudes" class="row">
               <td class="col-sm-2"><i>{{ solicitud.id }}</i></td>
               <td class="col-sm-3"><i>{{ solicitud.nombreAdoptante }}</i></td>

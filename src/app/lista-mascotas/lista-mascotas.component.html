@@ -2,6 +2,7 @@
     <br>
     <div class="row">
       <div class="col-sm-12">
+        <!-- Formulario para agregar una nueva mascota -->
         <form class="form-inline">
           <fieldset class="form-group col-sm-11"></fieldset>
           <fieldset class="form-group col-sm-1">
@@ -10,6 +11,7 @@
         </form>
         <br>
         <div class="row">
+          <!-- Itera sobre la lista de mascotas y muestra cada una en una tarjeta -->
           <div class="col-sm-4" *ngFor="let mascota of mascotas | async">
             <div class="card mb-4">
               <img class="card-img-top" [src]="mascota.imagen" alt="Imagen de {{ mascota.nombre }}" *ngIf="mascota.imagen; else noImage" />
@@ -21,6 +23,7 @@
                 <p class="card-text"><strong>Edad:</strong> {{ mascota.edad }} años</p>
                 <p class="card-text"><strong>Género:</strong> {{ mascota.genero }}</p>
                 <p class="card-text">{{ mascota.descripcion }}</p>
+                <!-- Botones para editar o borrar la mascota -->
                 <a class="btn btn-info" [routerLink]="['/mascotas/editar/', mascota.id]">Editar</a>
                 <a class="btn btn-danger" (click)="borrarMascota(mascota.id)">Borrar</a>
               </div>
