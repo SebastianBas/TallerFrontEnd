@@ -25,6 +25,7 @@
                 <p class="card-text">{{ mascota.descripcion }}</p>
                 <!-- Botones para editar o borrar la mascota -->
                 <a class="btn btn-info" [routerLink]="['/mascotas/editar/', mascota.id]">Editar</a>
+                <a class="btn btn-primary" [routerLink]="['/solicitudes/agregar']">Adoptar</a>
                 <a class="btn btn-danger" (click)="borrarMascota(mascota.id)">Borrar</a>
               </div>
             </div>
